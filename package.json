@@ -1,8 +1,8 @@
 {
-  "name": "braingame-yuliabet",
+  "name": "braingameyuliabet",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/bin/brain-games.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -26,6 +26,8 @@
     "@babel/preset-env": "^7.6.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0"
+    "@babel/polyfill": "^7.7.0",
+    "core-js": "^2.6.10",
+    "readline-sync": "^1.4.10"
   }
 }
