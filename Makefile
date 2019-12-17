@@ -14,7 +14,7 @@ test:
 	npm test
 
 lint:
-	npx eslint src/bin/brain-games.js
+	npx eslint .
 
 publish:
 	npm publish --dry-run
