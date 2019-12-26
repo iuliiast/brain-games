@@ -2,6 +2,7 @@ install: install-deps
 
 run:
 	npx babel-node 'src/bin/brain-games.js' 10
+	npx babel-node 'src/bin/brain-even.js' 10
 
 install-deps:
 	npm install
@@ -23,3 +24,4 @@ publish:
 
 start:
 	npx babel-node src/bin/brain-games.js
+	npx babel-node src/bin/brain-even.js
