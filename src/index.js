@@ -14,19 +14,30 @@ export const isEven = () => {
   console.log(`Hello, ${name}!`);
   // Появляется рандомное число
   const getRandomInt = (min, max) => {
-    let result = 0;
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    result = Math.floor(Math.random() * (max - min)) + min;
-    let correctAnswer = '';
-    if (result % 2 === 0) {
-      correctAnswer = 'yes';
-    } else correctAnswer = 'no';
-    console.log(`Question: ${result}`);
-    const getYesOrNo = readlineSync.question('Your answer: ');
-    if (getYesOrNo === correctAnswer) {
-      console.log('Correct!');
-    } else console.log(`'${getYesOrNo}' is wrong answer ;(. Correct answer was "no".\nLet's try again, ${name}!`);
+    let amountOfCorrectAnswers = 0;
+    for (let i = 0; i < 3; i += 1) {
+      let result = 0;
+      const minNum = Math.ceil(min);
+      const maxNum = Math.floor(max);
+      result = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+      let correctAnswer = '';
+      if (result % 2 === 0) {
+        correctAnswer = 'yes';
+      } else correctAnswer = 'no';
+      console.log(`Question: ${result}`);
+      const getYesOrNo = readlineSync.question('Your answer: ');
+      if (getYesOrNo === correctAnswer) {
+        amountOfCorrectAnswers += 1;
+        if (amountOfCorrectAnswers > 2) {
+          console.log(`Correct!\nCongratulations, ${name}!`);
+        } if (amountOfCorrectAnswers < 2) {
+          console.log('Correct!');
+        }
+      } else {
+        i = 3;
+        console.log(`'${getYesOrNo}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      }
+    }
   };
   return getRandomInt(1, 100);
 };
