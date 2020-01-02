@@ -1,4 +1,4 @@
 # frontend-project-lvl1 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage) [![Build Status](https://travis-ci.org/yuliabeton/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/yuliabeton/frontend-project-lvl1)
 Первый учебный проект
 
-[![asciicast](https://asciinema.org/a/de5m77nkPSV4bNCgsTce53JzT.svg)](https://asciinema.org/a/de5m77nkPSV4bNCgsTce53JzT)
+
