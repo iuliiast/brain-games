@@ -2,7 +2,12 @@
 Первый учебный проект
 
 Игра "Чётное ли число?"
+
 [![asciicast](https://asciinema.org/a/4gufM0pbWi532lgPLekWnwjN3.svg)](https://asciinema.org/a/4gufM0pbWi532lgPLekWnwjN3)
 
 Игра "Вычислить значение"
+
 [![asciicast](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP.svg)](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP)
+
+Игра "Найти набольший общий делитель"
+[![asciicast](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r.svg)](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r)
