@@ -2,42 +2,17 @@
 
 import readlineSync from 'readline-sync';
 
-export default () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+export const getWelcome = () => console.log('Welcome to the Brain Games!');
+export const startRoundLoop = 0;
+export const nextRound = 1;
+export const getRandomNum = (min, max) => {
+  const minNum = Math.ceil(min);
+  const maxNum = Math.floor(max);
+  const result = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+  return result;
 };
-export const isEven = () => {
-  // Начало игры
-  console.log('Welcome to the Brain Games!`n Answer "yes" if the number is even, otherwise answer "no".');
+export const userName = () => {
+  getWelcome();
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  // Появляется рандомное число
-  const getRandomInt = (min, max) => {
-    let amountOfCorrectAnswers = 0;
-    for (let i = 0; i < 3; i += 1) {
-      let result = 0;
-      const minNum = Math.ceil(min);
-      const maxNum = Math.floor(max);
-      result = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
-      let correctAnswer = '';
-      if (result % 2 === 0) {
-        correctAnswer = 'yes';
-      } else correctAnswer = 'no';
-      console.log(`Question: ${result}`);
-      const getYesOrNo = readlineSync.question('Your answer: ');
-      if (getYesOrNo === correctAnswer) {
-        amountOfCorrectAnswers += 1;
-        if (amountOfCorrectAnswers > 2) {
-          console.log(`Correct!\nCongratulations, ${name}!`);
-        } if (amountOfCorrectAnswers < 2) {
-          console.log('Correct!');
-        }
-      } else {
-        i = 3;
-        console.log(`'${getYesOrNo}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-      }
-    }
-  };
-  return getRandomInt(1, 100);
 };
