@@ -1,6 +1,6 @@
 {
   "name": "braingameyuliabet",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Brain Games - five calculation-related games, that the user performs in the terminal",
   "keywords": [
     "braingames",
@@ -42,9 +42,6 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.7.0",
-    "core-js": "^2.6.10",
-    "eslint-plugin-jest": "^23.1.0",
     "readline-sync": "^1.4.10"
   }
 }

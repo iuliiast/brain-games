@@ -1,40 +1,20 @@
-#!/usr/bin/env node
+import gameEngine from '..';
+import getRandomNum from '../utils';
 
-import readlineSync from 'readline-sync';
-import {
-  getWelcome, startRoundLoop, nextRound, getRandomNum,
-} from '..';
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-let amountOfRound = 3;
-let amountOfCorrectAnswers = 0;
+const isEven = (num) => num % 2 === 0;
 
-export default () => {
-  // Начало игры
-  getWelcome();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  const evenNum = 2;
-  // Появляется рандомное число
-  let correctAnswer = '';
-  for (let i = startRoundLoop; i < amountOfRound; i += nextRound) {
-    const randomNum = getRandomNum(1, 100);
-    if (randomNum % evenNum === 0) {
-      correctAnswer = 'yes';
-    } else correctAnswer = 'no';
-    console.log(`Question: ${randomNum}`);
-    const isAnswer = readlineSync.question('Your answer: ');
-    if (isAnswer === correctAnswer) {
-      amountOfCorrectAnswers += 1;
-      if (amountOfCorrectAnswers > 2) {
-        amountOfRound = 3;
-        console.log(`Correct!\nCongratulations, ${name}!`);
-      } if (amountOfCorrectAnswers <= 2) {
-        console.log('Correct!');
-      }
-    } else {
-      amountOfRound = 1;
-      console.log(`'${isAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-    }
+const getCore = () => {
+  const question = getRandomNum(1, 100);
+  let answer;
+  if (isEven(question) === true) {
+    answer = 'yes';
+  } else {
+    answer = 'no';
   }
+  const core = [question, answer];
+  return core;
 };
+
+export default () => gameEngine(rules, getCore);
