@@ -1,30 +1,26 @@
 import gameEngine from '..';
 import getRandomNum from '../utils';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getCore = () => {
-  const lessThanPrimeNum = 1;
-  const twoIsPrimeNum = 2;
-  const question = getRandomNum(1, 3600);
-  let answer = 'yes';
-  let counter;
-  const counterLimit = question;
-  if (question <= lessThanPrimeNum) {
-    answer = 'no';
+const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
   }
-  if (question === twoIsPrimeNum) {
-    answer = 'yes';
-  }
-  counter = twoIsPrimeNum;
-  while (counter !== counterLimit) {
-    if (question % counter === 0) {
-      answer = 'no';
+  let counter = 2;
+  while (counter !== num) {
+    if (num % counter === 0) {
+      return false;
     }
     counter += 1;
   }
-  const core = [question, answer];
-  return core;
+  return true;
 };
 
-export default () => gameEngine(rules, getCore);
+const getGameData = () => {
+  const question = getRandomNum(1, 3600);
+  const answer = (isPrime(question) ? 'yes' : 'no');
+  return [String(question), answer];
+};
+
+export default () => gameEngine(description, getGameData);

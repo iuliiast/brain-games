@@ -1,25 +1,26 @@
 import gameEngine from '..';
 import getRandomNum from '../utils';
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
-const getCore = () => {
-  const firstRandomNum = getRandomNum(1, 100);
-  const secondRandomNum = getRandomNum(1, 100);
-  const question = `${firstRandomNum} ${secondRandomNum}`;
-  // find GCD by Euclidean Algorithm
-  let a = firstRandomNum;
-  let b = secondRandomNum;
+const findGcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
   let remainder;
   while ((a % b) > 0) {
     remainder = a % b;
     a = b;
     b = remainder;
   }
-  const answerNum = b;
-  const answer = String(answerNum);
-  const core = [question, answer];
-  return core;
+  return b;
 };
 
-export default () => gameEngine(rules, getCore);
+const getGameData = () => {
+  const firstRandomNum = getRandomNum(1, 100);
+  const secondRandomNum = getRandomNum(1, 100);
+  const question = `${firstRandomNum} ${secondRandomNum}`;
+  const answer = findGcd(firstRandomNum, secondRandomNum);
+  return [String(question), String(answer)];
+};
+
+export default () => gameEngine(description, getGameData);

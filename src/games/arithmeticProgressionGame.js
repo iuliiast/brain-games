@@ -1,14 +1,14 @@
 import gameEngine from '..';
 import getRandomNum from '../utils';
 
-const rules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-const getCore = () => {
+const getGameData = () => {
   const startingNum = getRandomNum(1, 5);
   const commonDifference = getRandomNum(2, 5);
-  const missingNum = getRandomNum(1, 10);
   const quantityOfProgression = 10;
-  let correctAnswer;
+  const missingNum = getRandomNum(0, quantityOfProgression);
+  const answer = startingNum + missingNum * commonDifference;
   const arithmeticProgStr = () => {
     let currentResult = '';
     let result = '';
@@ -18,7 +18,7 @@ const getCore = () => {
       currentNum += commonDifference;
       if (startIndex === missingNum) {
         currentResult = '.. ';
-        correctAnswer = currentNum;
+        // correctAnswer = currentNum;
       } else {
         currentResult = `${String(currentNum)} `;
       }
@@ -28,11 +28,8 @@ const getCore = () => {
     const strWithoutLastSymbol = result.substr(0, result.length - 1);
     return strWithoutLastSymbol;
   };
-  arithmeticProgStr();
   const question = `${arithmeticProgStr()}`;
-  const answer = String(correctAnswer);
-  const core = [question, answer];
-  return core;
+  return [String(question), String(answer)];
 };
 
-export default () => gameEngine(rules, getCore);
+export default () => gameEngine(description, getGameData);
