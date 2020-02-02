@@ -10,10 +10,13 @@
 [![asciicast](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP.svg)](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP)
 
 Игра "Найти набольший общий делитель"
+
 [![asciicast](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r.svg)](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r)
 
  Игра "Простое ли число?"
+ 
 [![asciicast](https://asciinema.org/a/Z4nXLCp1xnZQqLIJlKzIj3X5v.svg)](https://asciinema.org/a/Z4nXLCp1xnZQqLIJlKzIj3X5v)
 
 Игра "Арифметическая прогрессия"
+
 [![asciicast](https://asciinema.org/a/LGmWSmUYIzPMCQlxy3QcrsPVP.svg)](https://asciinema.org/a/LGmWSmUYIzPMCQlxy3QcrsPVP)
