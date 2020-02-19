@@ -1,11 +1,11 @@
-import runGame from '..';
+import runGameEngine from '..';
 import getRandomNum from '../utils';
 
 const description = 'What is the result of the expression?';
 
-const operatorList = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
-const calcExpression = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -19,13 +19,13 @@ const calcExpression = (num1, num2, operator) => {
 };
 
 const getGameData = () => {
-  const randomOperator = operatorList[getRandomNum(0, operatorList.length - 1)];
+  const randomOperator = operators[getRandomNum(0, operators.length - 1)];
   const firstRandomNum = getRandomNum(1, 10);
   const secondRandomNum = getRandomNum(1, 5);
   const question = `${firstRandomNum} ${randomOperator} ${secondRandomNum}`;
-  const answer = calcExpression(firstRandomNum, secondRandomNum, randomOperator);
+  const answer = calculate(firstRandomNum, secondRandomNum, randomOperator);
 
   return [question, String(answer)];
 };
 
-export default () => runGame(description, getGameData);
+export default () => runGameEngine(description, getGameData);

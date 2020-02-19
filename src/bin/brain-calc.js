@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import calculateExpression from '../games/calculateExpressionGame';
+import runGame from '../games/calculateExpressionGame';
 
-calculateExpression();
+runGame();

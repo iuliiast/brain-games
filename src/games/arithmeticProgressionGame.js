@@ -1,32 +1,31 @@
-import runGame from '..';
+import runGameEngine from '..';
 import getRandomNum from '../utils';
 
 const description = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
-const makeProgression = (firstElement, commonDifference, hiddenElement) => {
-  let currentResult = '';
-  let result = '';
-  for (let index = 0; index <= progressionLength; index += 1) {
-    const currentIndex = firstElement + commonDifference * index;
-    if (index === hiddenElement) {
-      currentResult = '..';
+const getQuestion = (firstElement, commonDifference, hiddenElementIndex) => {
+  let current = '';
+  let question = '';
+  for (let index = 0; index < progressionLength; index += 1) {
+    if (index === hiddenElementIndex) {
+      current = '..';
     } else {
-      currentResult = `${currentIndex}`;
+      current = `${firstElement + commonDifference * index}`;
     }
-    result = `${result} ${currentResult}`;
+    question = `${question} ${current}`;
   }
-  return result.trim();
+  return question.trim();
 };
 
 const getGameData = () => {
   const startingNum = getRandomNum(1, 5);
   const commonDifference = getRandomNum(2, 5);
-  const hiddenElement = getRandomNum(0, progressionLength);
-  const question = makeProgression(startingNum, commonDifference, hiddenElement);
-  const answer = startingNum + hiddenElement * commonDifference;
+  const hiddenElementIndex = getRandomNum(0, progressionLength - 1);
+  const question = getQuestion(startingNum, commonDifference, hiddenElementIndex);
+  const answer = startingNum + hiddenElementIndex * commonDifference;
   return [question, String(answer)];
 };
 
-export default () => runGame(description, getGameData);
+export default () => runGameEngine(description, getGameData);

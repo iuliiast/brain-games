@@ -1,4 +1,4 @@
-import runGame from '..';
+import runGameEngine from '..';
 import getRandomNum from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -21,4 +21,4 @@ const getGameData = () => {
   return [String(question), answer];
 };
 
-export default () => runGame(description, getGameData);
+export default () => runGameEngine(description, getGameData);
