@@ -1,22 +1,38 @@
-# frontend-project-lvl1 [![Maintainability](https://api.codeclimate.com/v1/badges/a119fff516d99d6ddd29/maintainability)](https://codeclimate.com/github/yuliabeton/frontend-project-lvl1/maintainability) [![Build Status](https://travis-ci.org/yuliabeton/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/yuliabeton/frontend-project-lvl1)
-Первый учебный проект
+# Brain Games [![Maintainability](https://api.codeclimate.com/v1/badges/a119fff516d99d6ddd29/maintainability)](https://codeclimate.com/github/yuliabeton/frontend-project-lvl1/maintainability) [![Build Status](https://travis-ci.org/yuliabeton/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/yuliabeton/frontend-project-lvl1)
 
-Игра "Чётное ли число?"
+'Brain Games' is a set of five console games for training cognitive skills using math. In each game the player should answer questions. After three correct answers, the game is considered to be completed. Wrong answers end the game.
 
-[![asciicast](https://asciinema.org/a/4gufM0pbWi532lgPLekWnwjN3.svg)](https://asciinema.org/a/4gufM0pbWi532lgPLekWnwjN3)
+### Install
+* Clone this repository
+* Install NVM and Node.js
+* Run these commands
+```
+$ make install
+$ make publish
+$ npm link
+```
 
-Игра "Вычислить значение"
+### 'Brain Even'
+Guess if the number is even
 
-[![asciicast](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP.svg)](https://asciinema.org/a/9v5DDAtwQVhWtZ7jarcAtMikP)
+[![asciicast](https://asciinema.org/a/tGHdCTNxqnPbjwwRkQgPEW1x3.svg)](https://asciinema.org/a/tGHdCTNxqnPbjwwRkQgPEW1x3)
 
-Игра "Найти набольший общий делитель"
+### 'Brain Calc'
+Calculate arithmetic expressions
 
-[![asciicast](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r.svg)](https://asciinema.org/a/P4O6Ch7KOmfv46q9clqos1l5r)
+[![asciicast](https://asciinema.org/a/Z4zPEg0FV9QaaQyWjsZ8hGWlw.svg)](https://asciinema.org/a/Z4zPEg0FV9QaaQyWjsZ8hGWlw)
 
- Игра "Простое ли число?"
- 
-[![asciicast](https://asciinema.org/a/Z4nXLCp1xnZQqLIJlKzIj3X5v.svg)](https://asciinema.org/a/Z4nXLCp1xnZQqLIJlKzIj3X5v)
+### 'Brain GCD'
+Guess the greatest common divisor
 
-Игра "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/ZRhWWwaRPIfaVEgKKOCNmmQpi.svg)](https://asciinema.org/a/ZRhWWwaRPIfaVEgKKOCNmmQpi)
 
-[![asciicast](https://asciinema.org/a/LGmWSmUYIzPMCQlxy3QcrsPVP.svg)](https://asciinema.org/a/LGmWSmUYIzPMCQlxy3QcrsPVP)
+ ### 'Brain Prime'
+Guess if the number is prime
+
+[![asciicast](https://asciinema.org/a/5xGQgkui2zUIpvDfFFtiaFw8y.svg)](https://asciinema.org/a/5xGQgkui2zUIpvDfFFtiaFw8y)
+
+### 'Brain Progression'
+Write a missed number in a sequence of numbers
+
+[![asciicast](https://asciinema.org/a/LJ0XFkT32dmpIXsrsVxhNbi3Q.svg)](https://asciinema.org/a/LJ0XFkT32dmpIXsrsVxhNbi3Q)
